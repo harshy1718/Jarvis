@@ -7,14 +7,14 @@ from groq import Groq
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
-newsapi = "dfbdb0d195de404fbbf132deb67801d2"
+# newsapi = your api key
 
 def speak(text):
     engine.say(text)
     engine.runAndWait()
     
 def aiProcess(command):
-    client = Groq(api_key = "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")
+    # client = Groq(api_key = your api key)
     completion = client.chat.completions.create(
         model = "llama3-8b-8192",
         messages= [
